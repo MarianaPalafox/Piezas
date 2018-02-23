@@ -14,11 +14,11 @@ namespace Piezas_test
 
             ///tablero
             int[][] tablero = new int[5][] {
-                new int [9] { 0, 100, 0, 100, 0, 100, 0, 100, 0 },
-                new int [9] { 100, 0, 100, 0, 100, 0, 100, 0, 100 },
-                new int [9] { 0, 100, 0, 100, 0, 100, 0, 100, 0 },
-                new int [9] { 100, 0, 100, 0, 100, 0, 100, 0, 100 },
-                new int [9] { 0, 100, 0, 100, 0, 100, 0, 100, 0 },
+                new int [9] { 0, 0, 0, 0, 0, 0, 0, 0, 0 },
+                new int [9] { 0, 0, 0, 0, 0, 0, 0, 0, 0 },
+                new int [9] { 0, 0, 0, 0, 0, 0, 0, 0, 0 },
+                new int [9] { 0, 0, 0, 0, 0, 0, 0, 0, 0 },
+                new int [9] { 0, 0, 0, 0, 0, 0, 0, 0, 0 },
             };
             ///
             ///pieza verde
@@ -215,17 +215,63 @@ namespace Piezas_test
                 }
             };
             // Iteramos las posiciones en el tablero todas
-            for (int i = 0; i < arr.GetLength(0); i++) 
-                // Iteramos la fila para esa posicion
-                for (int j = 0; j < arr.GetLength(1); j++)
-                    for (int k = 0; k < arr.GetLength(2); k++)
+            /* for (int i = 0; i < arr.GetLength(0); i++) 
+                 // Iteramos la fila para esa posicion
+                 for (int j = 0; j < arr.GetLength(1); j++)
+                     for (int k = 0; k < arr.GetLength(2); k++)
+                     {
+                         Console.Write(arr[i][j][k]);
+                     }*/
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine("LONGPOS");
+            
+            
+            for (int i = 0; i < tablero.GetLength(0); i++)
+            {
+
+                for (int j = 0; j < 9; j++)
+                {
+
+                    Console.ForegroundColor = ConsoleColor.Green;
+                    if ((tablero[i][j] == 0 && allTransoformations.ElementAt(0)[i][j]!=0)||(tablero[i][j]==0 && allTransoformations.ElementAt(0)[i][j]==0))
                     {
-                        Console.Write(arr[i][j][k]);
+                        tablero[i][j] = tablero[i][j] + allTransoformations.ElementAt(0)[i][j];
+                        Console.Write(tablero[i][j]+" ");
+                    }
+                    else {
+                        return;
+                    }
+                        
+                    
+
+                }
+                Console.WriteLine();
+            }
+
+            for (int i = 0; i < tablero.GetLength(0); i++)
+            {
+
+                for (int j = 0; j < 9; j++)
+                {
+
+                    Console.ForegroundColor = ConsoleColor.Yellow;
+                    if ((tablero[i][j] == 0 && p_am1[i][j] != 0) || (tablero[i][j] == 0 && p_am1[i][j] == 0))
+                    {
+                        tablero[i][j] = tablero[i][j] + p_am1[i][j];
+                        Console.Write(tablero[i][j] + " ");
+                    }
+                    else
+                    {
+                        //return;
                     }
                     
-           
-      
 
+
+                }
+                Console.WriteLine();
+            }
+
+            
             Console.ReadKey();
         }
     }
