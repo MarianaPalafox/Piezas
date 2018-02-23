@@ -1,0 +1,6 @@
+C:\Users\maria\source\repos\Piezas_test\Piezas_test\bin\Debug\Piezas_test.exe
+C:\Users\maria\source\repos\Piezas_test\Piezas_test\bin\Debug\Piezas_test.pdb
+C:\Users\maria\source\repos\Piezas_test\Piezas_test\obj\Debug\Piezas_test.csprojResolveAssemblyReference.cache
+C:\Users\maria\source\repos\Piezas_test\Piezas_test\obj\Debug\Piezas_test.csproj.CoreCompileInputs.cache
+C:\Users\maria\source\repos\Piezas_test\Piezas_test\obj\Debug\Piezas_test.exe
+C:\Users\maria\source\repos\Piezas_test\Piezas_test\obj\Debug\Piezas_test.pdb
